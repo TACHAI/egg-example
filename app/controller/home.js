@@ -15,7 +15,7 @@ class HomeController extends Controller {
     let title = '标题'
     // ctx.body = res;
     await ctx.render('index', {
-      res,
+      res:sql,
       title:title,
     });
   }
