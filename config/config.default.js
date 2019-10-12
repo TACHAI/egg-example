@@ -13,25 +13,32 @@ module.exports = appInfo => {
   const config = exports = {};
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1570672723101_7395';
+  exports.keys = appInfo.name + '_1570672723101_7395';
 
   // add your middleware config here
-  config.middleware = [];
+  exports.middleware = [];
 
-  config.security = {
+  exports.security = {
     csrf: {
       enable: false,
     },
   }
 
-  config.view = {
+  // exports.view = {
+  //   mapping: {
+  //     '.html': 'ejs',
+  //   },
+  // }
+
+  exports.view = {
+    defaultView: 'nunjucks',
     mapping: {
-      '.html': 'ejs',
-    }
+      '.html': 'nunjucks',
+    },
   }
 
 
-  config.mysql = {
+  exports.mysql = {
     // 单数据库信息配置
     client: {
       // host
@@ -39,7 +46,7 @@ module.exports = appInfo => {
       port: '3306',
       user: 'root',
       password: 'hzc778209',
-      database: '',
+      database: 'calender',
     },
     // 是否加载到app上,默认开启
     app: true,

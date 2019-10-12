@@ -7,13 +7,18 @@
 //   // }
 // };
 
-export.ejs = {
-  enable: true,
-  package: 'egg-view-ejs',
-};
+// exports.ejs = {
+//   enable: true,
+//   package: 'egg-view-ejs',
+// };
 
-export.mysql = {
+exports.nunjucks = {
   enable: true,
-  package: 'egg-mysql'
+  package: 'egg-view-nunjucks',
+}
+
+exports.mysql = {
+  enable: true,
+  package: 'egg-mysql',
 }
 

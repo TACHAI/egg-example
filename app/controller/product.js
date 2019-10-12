@@ -21,10 +21,12 @@ class ProductController extends Controller{
   }
 
   async create() {
-    const { ctx } =this;
+    const { ctx } = this;
     console.log(ctx.request.body)
+    const result = ctx.request.body
     ctx.body = {
-      id: 123
+      id: 123,
+      res: result,
     };
   }
 }
